@@ -5,9 +5,9 @@
   const doubled = computed(() => count.value * 2)
   const magic = computed(() => {
     if (count.value % 2 === 0) {
-      return 'even'
+      return '➖'
     } else {
-      return 'odd'
+      return '〰️'
     }
   })
 
@@ -25,13 +25,13 @@
     +
   </button>
   <div class="counter-magic">
-  <span>Die Zahl ist: {{ magic }}</span>
+    <span>Die Zahl ist: {{ magic }}</span>
   </div>
   </div>
   <div class="counter-container">
-  <div class="counter-doubled">
-  <span>Das doppelte ist: {{ doubled }}</span>
-  </div>
+    <div class="counter-doubled">
+      <span>Das doppelte ist: {{ doubled }}</span>
+    </div>
   </div>
 
 </template>
