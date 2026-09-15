@@ -24,6 +24,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
 
   @media (max-width: 1024px) {
     font-size: 16px;
@@ -52,6 +53,7 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
 }
 
 h1,
@@ -163,8 +165,8 @@ code {
   text-align: center;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   box-sizing: border-box;
 }
 
@@ -180,6 +182,67 @@ code {
     padding: 32px 20px 24px;
     gap: 18px;
   }
+}
+.counter-container {
+  padding: 36px;
+  text-align: center;
+  background: #fff5fa;
+  border: 2px solid #e889b4;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(125, 20, 76, 0.2);
+}
+
+.counter-display {
+  margin-bottom: 28px;
+}
+
+.counter-value {
+  display: block;
+  color: #8b1555;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.ButtonCounter {
+  width: 55px;
+  height: 48px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  background: #a71962;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ButtonCounter:hover {
+  background: #710d42;
+  transform: translateY(-3px);
+}
+
+.ButtonCounter:active {
+  transform: translateY(1px);
+}
+
+.ButtonCounter:focus-visible {
+  outline: 3px solid #ed8fba;
+  outline-offset: 3px;
+}
+
+.counter-doubled {
+  margin-top: 24px;
+  color: #8b1555;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.counter-magic {
+  margin-top: 24px;
+  color: #8b1555;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #next-steps {
