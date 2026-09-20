@@ -10,6 +10,7 @@
       return '〰️'
     }
   })
+  const openYoutube = () => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')
 
 </script>
 
@@ -33,5 +34,11 @@
       <span>Das doppelte ist: {{ doubled }}</span>
     </div>
   </div>
-
+  <div class="counter-container">
+    <div class="counter-doubled">
+      <button class="MagicButton" @click="openYoutube">
+        Magic
+      </button>
+    </div>
+  </div>
 </template>

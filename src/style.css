@@ -231,6 +231,64 @@ code {
   outline-offset: 3px;
 }
 
+.MagicButton {
+  position: relative;
+  isolation: isolate;
+  min-width: 150px;
+  padding: 14px 28px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(120deg, #ff4d8d, #ff9f43, #ffd447, #4ed6b8, #668cff);
+  background-size: 250% 250%;
+  box-shadow: 0 8px 20px rgba(197, 53, 125, 0.35), 0 0 0 3px #f3a6d0;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: magic-colors 5s ease infinite;
+}
+
+.MagicButton::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: '';
+  background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.65) 50%, transparent 75%);
+  transform: translateX(-120%);
+  transition: transform 0.5s;
+}
+
+.MagicButton:hover {
+  transform: translateY(-4px) rotate(-1deg) scale(1.04);
+  box-shadow: 0 12px 25px rgba(197, 53, 125, 0.45), 0 0 0 4px #f3a6d0;
+}
+
+.MagicButton:hover::after {
+  transform: translateX(120%);
+}
+
+.MagicButton:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.MagicButton:focus-visible {
+  outline: 3px solid #4ed6b8;
+  outline-offset: 5px;
+}
+
+@keyframes magic-colors {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 .counter-doubled {
   margin-top: 24px;
   color: #8b1555;
